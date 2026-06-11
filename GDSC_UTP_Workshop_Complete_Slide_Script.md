@@ -33,6 +33,9 @@ GDSC UTP Workshop Series
 2:00 PM – 5:00 PM
 ```
 
+**Suggested Visual/Layout:**
+Keep existing hero layout. Large title in neon/glow font. React atom icon + GitHub Copilot brain icon flanking the title. Dark circuit background. Bottom bar with event details.
+
 **Speaker Notes (🤖 Speaker B opens):**
 "Welcome everyone. Before we start — raise your hand if you've never written a line of React before. Perfect. That's exactly who this workshop is for. In three hours you're going to build a real, working application and have an AI coding assistant helping you the whole way. We're not here to give you a lecture — we're here to get you coding."
 
@@ -53,6 +56,9 @@ React Lead               Copilot Lead
 
 "We've been where you are. Today we share what actually works."
 ```
+
+**Suggested Visual/Layout:**
+Two-column card layout. Each card has: photo, name, title badge in neon green. Same hexagonal card style as existing deck.
 
 **Speaker Notes (👥 Both):**
 Each speaker: 20 seconds max. Name, year, what you build. No lengthy bios. End with: "Alright — let's see what you're working with today."
@@ -92,6 +98,9 @@ Get this done in the next 10 minutes
     OR use the backup: [CodeSandbox link here]
 ```
 
+**Suggested Visual/Layout:**
+Numbered checklist cards in the existing hexagonal/octagonal style. Each numbered item as its own card. A prominent "🆘 Stuck?" section at the bottom in a different accent color. QR code linking to CodeSandbox as fallback.
+
 **Speaker Notes (👥 Both — room walkers):**
 Speaker A stays at the front and reads through each step aloud, demonstrating on the projector in real time. Speaker B walks the room immediately. "If you hit an error you don't understand, don't try to fix it alone — wave at us right now." **Do not advance until at least 80% of the room has a running dev server.** Use the CodeSandbox fallback for anyone who cannot get Node working. Budget: 12–15 minutes.
 
@@ -124,6 +133,9 @@ Features visible: task list, add button, delete, complete toggle, task counter
 "Every concept we teach — you build it in the next 5 minutes."
 ```
 
+**Suggested Visual/Layout:**
+Left half: Four achievement cards with icons. Right half: A large, clean screenshot or mockup of the final Task Manager app with callout arrows labeling: "useState here", "Props here", "Component here". This visual is the north star for the whole workshop — make it iconic.
+
 **Speaker Notes (🎤 Speaker A):**
 "This is what you're building today. [Point to app screenshot] This Task Manager. You can add tasks, delete them, mark them complete, and later we're going to supercharge it with AI. Every piece of theory we cover today is going to immediately show up in this app. So keep this screenshot in your head — it's your destination."
 
@@ -153,6 +165,9 @@ SHOWCASE + CLOSE                    4:45 – 5:00 PM
 
 "Every 10 minutes: learn something → immediately use it."
 ```
+
+**Suggested Visual/Layout:**
+Timeline with three distinct phase blocks, color-coded. Phase 1 in teal/cyan, Phase 2 in green, Phase 3 in gold/yellow. Existing left-side timeline node style works perfectly here. Break clearly marked as a rest point.
 
 **Speaker Notes (🎤 Speaker A):**
 "Here's the deal — you will never go more than 10 minutes without typing code. This is not a lecture. Every concept you hear, you will immediately use. If you get stuck at any point, that's normal and expected — just raise your hand. Alright, let's go."
@@ -188,6 +203,9 @@ Used by: Instagram • Netflix • Airbnb • Atlassian • Shopify
 
 "You're not learning a toy. You're learning what the industry uses."
 ```
+
+**Suggested Visual/Layout:**
+Two-panel split. Left panel has a "before" feel (cluttered, red-tinted). Right panel has a clean, neon green feel. Company logos at the bottom as small badge pills.
 
 **Speaker Notes (🎤 Speaker A):**
 "Before React existed, updating a webpage meant manually finding elements in the DOM and changing them one by one. It got messy fast. React flipped the model — instead of telling the browser *how* to update, you just describe *what* the UI should look like given the current data. React figures out what changed and updates the minimum necessary. That's the core idea. Let's see it."
@@ -225,6 +243,9 @@ Each component:
 
 "Today you will build every one of these components."
 ```
+
+**Suggested Visual/Layout:**
+A nested box diagram in the existing neon-on-dark style. Each component box is outlined in cyan or green. Arrows show nesting. This diagram should be clean and large — it's a reference point students will return to mentally throughout the workshop.
 
 **Speaker Notes (🎤 Speaker A):**
 "This is your app's architecture. Every box is a component — a reusable piece of UI. You're going to build all of these today. `App` is the container. `Header` shows the title. `TaskList` holds the tasks. `TaskCard` is one task. The same `TaskCard` component gets reused for every task in the list — that's the power of components. You build it once, use it many times."
@@ -460,6 +481,9 @@ RULES:
   ❌  A child CANNOT modify its own props
 ```
 
+**Suggested Visual/Layout:**
+Top: the "before" (hardcoded) and "after" (props) comparison. Middle: a clear parent→child flow arrow diagram. Bottom: the rules in the existing card style. Syntax highlight `{title}` and `{status}` prominently — students need to see the `{}` usage clearly.
+
 **Speaker Notes (🎤 Speaker A):**
 "Here's the fix. Instead of hardcoding 'Finish my assignment' inside TaskCard, you pass it in as a prop when you use the component. Think of it like a function argument — `TaskCard` is the function, `title` and `status` are the arguments. The data flows one way: from the parent down to the child. The child cannot change its own props — that's an important rule. It receives and displays, that's it. Let's fix our app."
 
@@ -515,6 +539,9 @@ This is the power of reusable components.
 "So far your app is static. Let's make it alive."
 ```
 
+**Suggested Visual/Layout:**
+Clean parent→children diagram. Use the component tree style from slide 7 but now populated with the actual app components. A progress tracker at the bottom showing: JSX ✅ Components ✅ Props ✅ State (next).
+
 **Speaker Notes (🎤 Speaker A):**
 "Quick check-in — the concept covered. JSX lets you write UI in JavaScript. Components are reusable functions that return JSX. Props let parents pass data to children. Now the question is: what if the data *changes*? Like when a user adds a task or marks one complete? Props can't do that — props are read-only. That's where State comes in."
 
@@ -555,6 +582,9 @@ HOW TO CREATE STATE:
 
 "Never modify state directly. Always use the setter function."
 ```
+
+**Suggested Visual/Layout:**
+The re-render loop as a circular flow diagram in the existing neon style. Arrows clearly connecting each step. The `useState` destructuring explained with annotated callout arrows above each part. This is a concept slide — make the diagram large and clear.
 
 **Speaker Notes (🎤 Speaker A):**
 "This loop is everything. Burn it into your brain. You change state using `setTasks`. React sees the change, re-runs your component, gets fresh JSX, and updates the DOM. You never touch the DOM directly. You never write `document.getElementById`. You just update state and React handles the rest. The golden rule: NEVER modify state directly. Don't say `tasks.push(newTask)`. Always call `setTasks` and give it the new array."
@@ -875,6 +905,9 @@ THE CONCEPTS BEHIND WHAT YOU BUILT:
  When you return: your AI coding partner joins the workshop."
 ```
 
+**Suggested Visual/Layout:**
+Celebration energy — use the existing trophy/achievement visual style. Left: the completed component tree (now with real component names from the app). Right: the four concepts as completed achievement badges. Break announcement in a prominent accent color. Make this feel like a level-up screen.
+
 **Speaker Notes (👥 Both):**
 "Genuinely — well done. What you just built in 50 minutes took professional developers weeks to learn when they were starting out. You have a working React application. Take your 10 minutes. When you come back, we're going to show you how to build this kind of code 2x faster using an AI assistant."
 
@@ -921,6 +954,9 @@ THE WORKFLOW:
 "You spent 50 minutes learning React.
  Now watch how Copilot uses that knowledge with you."
 ```
+
+**Suggested Visual/Layout:**
+Left: the "pair programmer" concept visualised — two people at a desk, one typing, one suggesting (or: developer + AI brain graphic). Right: the workflow diagram as a clean three-step loop. Keyboard shortcuts in code-pill style.
 
 **Speaker Notes (🤖 Speaker B):**
 "Here's the right way to think about Copilot: you just spent 50 minutes learning how state works, how props flow, how to structure components. Copilot knows all of that too — actually, it's read millions of React codebases. So when you're working, it can suggest patterns you'd spend 5 minutes googling. But you have to steer it. Copilot is the co-pilot, not the pilot. You're still flying the plane."
@@ -1026,6 +1062,9 @@ PROMPT TEMPLATE:
 "A developer who can prompt well gets 10 hours of work done in 3."
 ```
 
+**Suggested Visual/Layout:**
+Two-column comparison: weak vs. strong prompts. Each weak prompt has a ❌ and a note on why it's weak. Each strong prompt has a ✅ and an annotation explaining what makes it effective. The Prompt Template at the bottom in a highlighted code box.
+
 **Speaker Notes (🤖 Speaker B):**
 "The single biggest skill with any AI coding tool isn't learning the shortcuts — it's learning to give good instructions. The more specific you are about what you need, what parameters are involved, and what the expected behaviour is, the more useful the suggestion will be. Think of it like writing a spec for a junior developer — the better the spec, the better the code."
 
@@ -1123,6 +1162,9 @@ THE GOLDEN RULE:
   regardless of who (or what) wrote it.
 ```
 
+**Suggested Visual/Layout:**
+Three-row table: green row (IS great for), amber row (STRUGGLES with), red row (CANNOT). The Golden Rule at the bottom in a gold/amber callout box. Keep it clean and readable.
+
 **Speaker Notes (🤖 Speaker B):**
 "I want to be straight with you before the challenge. Copilot is a tool, and like any tool it has limitations. The biggest mistake beginners make is accepting every suggestion without reading it. Sometimes Copilot will generate code that looks right but has a subtle bug. You'll only catch it if you read it. Your React knowledge from Phase 1 is exactly what lets you evaluate whether Copilot's suggestion is good or not. That's why we taught React first."
 
@@ -1164,6 +1206,9 @@ TOOLS AVAILABLE:
 
 "The best hack isn't the most code. It's the most learning."
 ```
+
+**Suggested Visual/Layout:**
+High-energy slide. Mission header in large neon type. A graphic showing the folder hierarchy or ZIP extraction. Rules in clear numbered/bulleted format. A clock graphic reinforcing the 30-minute window.
 
 **Speaker Notes (👥 Both):**
 "This is it. 30 minutes. You have a working app. Now you're going to make it yours. If your app is currently stuck or not working, don't worry — just open a fresh copy of the 'Challenge/Starter Project' folder from the ZIP file you downloaded earlier. It has the complete, working baseline for the challenge ready to go. Use Copilot as your partner — write comments, generate code, review it, fix it. We're walking around the room. Ask us anything. Go."
@@ -1219,6 +1264,9 @@ BONUS — CREATIVITY AWARD
   🏆  Most creative feature: +15 pts
       (Judged by the room, not the speakers)
 ```
+
+**Suggested Visual/Layout:**
+Three-tier card layout — Tier 1 cards in teal, Tier 2 in green, Tier 3 in gold. Each card shows the feature name, point value, and a one-line hint. Bonus award card in a special accent. This is a reference slide — keep it on screen throughout the challenge if possible.
 
 **Speaker Notes (👥 Both — keep brief, students need to start):**
 "Quick walk-through. Tier 1 features you can absolutely do with what you learned today. Tier 2 needs a bit more thinking — use Copilot heavily for these. Tier 3 introduces concepts just beyond today's scope — challenge yourselves. LocalStorage in particular: Copilot can guide you through `useEffect`, but ask us if you get stuck. Any questions before the clock starts? Great. Go."
@@ -1337,6 +1385,9 @@ AUDIENCE VOTE:
       [QR code to voting form or raise hands]
 ```
 
+**Suggested Visual/Layout:**
+Showcase energy — rocket ship icon, leaderboard-style layout. Three presenter slots visible as cards. Judging criteria as clean icon+label pairs. QR code for the audience vote prominently displayed. Timer visible (3 minutes per presenter).
+
 **Speaker Notes (👥 Both):**
 Pre-select presenters during the challenge walkabout — approach 2–3 students whose work was impressive and ask them quietly if they'd like to present. Having pre-confirmed presenters avoids the silence of waiting for volunteers. Introduce each presenter warmly. Keep the 3-minute timer strict — it's better to have a crisp showcase than an overrun one. After each presenter: brief applause, one question from the room.
 
@@ -1377,6 +1428,9 @@ Starting from zero at 2:00 PM.
 This is real full-stack development skills.
 Not a tutorial. Not copy-paste. You built it.
 ```
+
+**Suggested Visual/Layout:**
+Four achievement cards in the existing hexagonal style. Each card has an icon, a title, and a brief description. A screenshot of the final Task Manager app in the background or corner. The last line ("Not a tutorial") in a prominent accent quote style.
 
 **Speaker Notes (👥 Both):**
 "I want to be direct with you. What you did today — going from zero React knowledge to a working application with AI-assisted features in 3 hours — is genuinely impressive. That's not workshop flattery. These are the same skills you'd use on a real project. Components, state, props — these are the same patterns used at every company that builds with React. You've got the foundation."
@@ -1419,6 +1473,9 @@ KEY HOOKS TO LEARN NEXT:
   useRef      → access DOM elements directly
 ```
 
+**Suggested Visual/Layout:**
+Dense but clean reference card. Three sections with clear labels. Use the existing card/panel layout. This slide should be photograph-worthy — high contrast, readable font, all key terms visible. Include a "Take a photo of this!" callout.
+
 **Speaker Notes (🎤 Speaker A):**
 "Take a photo of this slide — this is your reference card. These concepts will come up every time you write React. When you're stuck on props vs state, come back to this. When you're wondering how re-renders work, come back to this. These are the fundamentals — everything else in React is built on top of these ideas."
 
@@ -1456,6 +1513,9 @@ RESOURCES:
 "The developers who grow fastest are the ones who
  build things — not the ones who watch more tutorials."
 ```
+
+**Suggested Visual/Layout:**
+Timeline roadmap with four nodes: Week 1, Week 2-4, Month 2, and Resources. Each node has concrete, actionable items — not vague goals. Resources section with real URLs formatted as badge-pills. The closing quote in a large accent typestyle.
 
 **Speaker Notes (🤖 Speaker B):**
 "My honest advice: don't watch 10 more tutorials this week. Take the Task Manager you built today and rebuild it tomorrow from scratch without looking at the slides. If you can do that, you genuinely understand React. That's how you make it stick. Then add one new feature. Then build something for your portfolio. You have the foundation now — use it."
@@ -1498,6 +1558,9 @@ UPCOMING EVENTS:
 Q&A | GROUP PHOTO | STAY CONNECTED
 Learning Hub Block 1, UTP | 13 June 2026
 ```
+
+**Suggested Visual/Layout:**
+Keep the existing closing slide style. "Thank You!" in the large neon glow font. Two prominent QR codes: one for community chat, one for feedback/certificate form. Event logos. Speaker names at the bottom. The GitHub Copilot mascot and React atom as the flanking visuals — same as the current closing slide.
 
 **Speaker Notes (👥 Both):**
 "Quick last things. If you want a certificate, scan that QR code and fill in the two-minute feedback form — we read every response. Take a screenshot of your customized Task Manager app and share it in our Telegram/WhatsApp group chat so everyone can see what you designed today! Post it online and tag us as well. Group photo in 2 minutes. Thank you all for being here."
