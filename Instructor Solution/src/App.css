@@ -1,0 +1,324 @@
+/* ─────────────────────────────────────────────────────────────────────────── */
+/* App.css — Task Manager Workshop Starter                                      */
+/* Clean, readable styles. Don't worry too much about CSS today —               */
+/* focus on the React logic in the .jsx files.                                 */
+/* ─────────────────────────────────────────────────────────────────────────── */
+
+/* ── RESET & BASE ─────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #1a1a2e;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* ── APP LAYOUT ───────────────────────────────────────────────────────────── */
+.app {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 16px 80px;
+}
+
+/* ── HEADER ───────────────────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #ffffff;
+  padding: 20px 28px;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 20px rgba(26, 26, 46, 0.3);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-icon {
+  font-size: 28px;
+}
+
+.header-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.header-subtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 2px;
+}
+
+.header-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 8px 16px;
+  min-width: 80px;
+}
+
+.badge-number {
+  font-size: 28px;
+  font-weight: 800;
+  color: #4ade80;
+  line-height: 1;
+}
+
+.badge-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+/* ── MAIN CONTENT ─────────────────────────────────────────────────────────── */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── ADD TASK FORM ────────────────────────────────────────────────────────── */
+.add-task-form {
+  display: flex;
+  gap: 10px;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.add-task-input {
+  flex: 1;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #1a1a2e;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.add-task-input::placeholder {
+  color: #9ca3af;
+}
+
+.add-task-input:focus {
+  border-color: #6366f1;
+}
+
+/* ── BUTTONS ──────────────────────────────────────────────────────────────── */
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-add {
+  background: #6366f1;
+  color: #ffffff;
+  white-space: nowrap;
+  padding: 12px 22px;
+}
+
+.btn-add:hover {
+  background: #4f46e5;
+}
+
+.btn-toggle--done {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.btn-toggle--done:hover {
+  background: #a7f3d0;
+}
+
+.btn-toggle--undo {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.btn-toggle--undo:hover {
+  background: #fde68a;
+}
+
+.btn-delete {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.btn-delete:hover {
+  background: #fecaca;
+}
+
+/* ── TASK LIST ────────────────────────────────────────────────────────────── */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── TASK CARD ────────────────────────────────────────────────────────────── */
+.task-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #6366f1;
+  transition: all 0.2s ease;
+  gap: 16px;
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.task-card--done {
+  border-left-color: #d1d5db;
+  opacity: 0.75;
+}
+
+.task-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.task-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a2e;
+  word-break: break-word;
+}
+
+.task-title--done {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.task-status {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.status--pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status--done {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.task-card-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* ── EMPTY STATE ──────────────────────────────────────────────────────────── */
+.empty-state {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 16px;
+  padding: 48px 24px;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 2px dashed #e5e7eb;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .header-left {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .add-task-form {
+    flex-direction: column;
+  }
+
+  .task-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-card-actions {
+    width: 100%;
+  }
+
+  .task-card-actions .btn {
+    flex: 1;
+  }
+}
+
+/* Completed challenge features */
+.challenge-controls { display: grid; grid-template-columns: 1fr auto; gap: 12px; margin-bottom: 10px; }
+.search-input { width: 100%; padding: 12px 16px; border: 2px solid #e5e7eb; border-radius: 10px; font-size: 15px; outline: none; }
+.search-input:focus { border-color: #6366f1; }
+.filter-tabs { display: flex; gap: 8px; padding: 6px; border-radius: 12px; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+.tab-btn { padding: 8px 13px; border: 2px solid #e5e7eb; border-radius: 8px; background: transparent; font-weight: 700; cursor: pointer; }
+.tab--active { color: #fff; border-color: #6366f1; background: #6366f1; }
+.results-count { margin: 0 0 12px; color: #6b7280; font-size: 13px; }
+.task-card--pending { border-left-color: #f59e0b; }.task-card--done { border-left-color: #10b981; }
+.task-meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.priority-badge { padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; text-transform: capitalize; }
+.priority-high { color: #991b1b; background: #fee2e2; }.priority-medium { color: #92400e; background: #fef3c7; }.priority-low { color: #065f46; background: #d1fae5; }
+.edit-input { width: min(420px, 100%); padding: 9px 11px; border: 2px solid #6366f1; border-radius: 8px; font-size: 15px; }
+.btn-edit { color: #3730a3; background: #e0e7ff; }.btn-save { color: #065f46; background: #d1fae5; }.btn-cancel { color: #374151; background: #e5e7eb; }
+.theme-toggle { border: 1px solid rgba(255,255,255,.35); border-radius: 9px; padding: 9px 12px; color: #fff; background: rgba(255,255,255,.12); cursor: pointer; font-weight: 700; }
+.progress-bar-container { margin-bottom: 18px; padding: 16px 20px; border-radius: 14px; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+.progress-copy { display: flex; justify-content: space-between; gap: 12px; color: #4b5563; font-size: 13px; }.progress-copy strong { color: #1f2937; }
+.progress-bar-track { height: 10px; margin-top: 10px; overflow: hidden; border-radius: 100px; background: #e5e7eb; }.progress-bar-fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg,#6366f1,#8b5cf6); transition: width .4s ease; }
+.dark { min-height: 100vh; color: #e2e8f0; background: #0f172a; }.dark .main { color: #e2e8f0; }.dark .task-card,.dark .add-task-form,.dark .filter-tabs,.dark .progress-bar-container,.dark .empty-state { color: #e2e8f0; background: #1e293b; }.dark .task-title,.dark .progress-copy strong { color: #e2e8f0; }.dark .add-task-input,.dark .search-input,.dark .edit-input { color: #e2e8f0; border-color: #334155; background: #0f172a; }.dark .tab-btn { color: #94a3b8; border-color: #334155; }.dark .tab--active { color: #fff; border-color: #6366f1; background: #6366f1; }.dark .progress-bar-track { background: #334155; }.dark .results-count,.dark .progress-copy { color: #94a3b8; }
+@media (max-width: 680px) { .challenge-controls { grid-template-columns: 1fr; }.filter-tabs { width: 100%; }.tab-btn { flex: 1; }.progress-copy { flex-direction: column; } }

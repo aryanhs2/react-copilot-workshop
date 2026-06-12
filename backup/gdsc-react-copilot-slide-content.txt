@@ -1,0 +1,947 @@
+REACT + GITHUB COPILOT WORKSHOP ? COMPLETE SLIDE CONTENT
+Source: gdsc-react-copilot-polished.html
+Total slides: 33
+
+========================================================================
+SLIDE 01 ? React + GitHub Copilot Workshop
+========================================================================
+GDSC UTP Workshop Series
+
+React + GitHub Copilot
+Workshop
+
+Build Modern Web Applications with AI
+
+📍 Learning Hub Block 1
+⏰ 13 June 2026
+⚡ beginner-friendly
+
+Facilitators: [React Lead Name] — React Lead | [Copilot Lead Name] — Copilot Lead
+
+========================================================================
+SLIDE 02 ? Why Are We Here?
+========================================================================
+Why Are We Here?
+
+Modern web development is now a mix of fundamentals, tools, and judgment.
+
+R
+
+React Powers Modern Apps
+
+Many teams use React to build interactive dashboards, portals, marketplaces, and product interfaces.
+
+AI
+
+AI Accelerates Development
+
+Copilot can suggest code quickly, especially when you give clear context and review the output.
+
+{ }
+
+Developers Use Both
+
+Professionals combine strong fundamentals with AI assistance to ship faster without switching off their thinking.
+
+Remember
+
+AI accelerates coding, but React fundamentals help you structure the solution correctly.
+
+========================================================================
+SLIDE 03 ? Workshop Objectives
+========================================================================
+Workshop Objectives
+
+Three outcomes for a beginner-friendly, hands-on React workshop.
+
+1. Foundational React Skills
+
+Develop foundational skills in JSX, components, props, and state.
+
+2. AI-Assisted Development
+
+Use GitHub Copilot to suggest code, write prompts, and accelerate development.
+
+3. Build a Mini-Project
+
+Apply what you learn by building and extending a Student Task Manager app.
+
+========================================================================
+SLIDE 04 ? What You Will Build Today
+========================================================================
+What You Will Build Today
+
+Student Task Manager. Every React concept connects back to this app.
+
+Core Features
+
++ Add tasks
+
+x Delete tasks
+
+ok Mark complete
+
+# Live counter
+
+AI Copilot enhancements
+
+Why this app
+
+It is small enough for beginners, but real enough to practice data flow, events, and state updates.
+
+Student Task Manager
+
+2 pending
+
++ Add
+
+Build TaskCard component
+
+High
+Done
+
+Revise JavaScript arrays
+
+Medium
+
+Test add and delete buttons
+
+Low
+
+========================================================================
+SLIDE 05 ? Workshop Roadmap
+========================================================================
+Workshop Roadmap
+
+This is a coding workshop: learn a concept, type it, test it, repeat.
+
+Phase 1
+
+React Fundamentals
+
+JSX to components to props to state, with mini-builds after each concept.
+
+Phase 2
+
+GitHub Copilot
+
+See how context, comments, current files, and review habits shape suggestions.
+
+Phase 3
+
+Challenge Activity
+
+Use the GitHub starter repo, build extra features, earn points, and demo your work.
+
+Remember
+
+Each phase is interactive: you'll learn the concepts first, then write the code and test it with Copilot.
+
+========================================================================
+SLIDE 06 ? What is React?
+========================================================================
+What is React?
+
+The 60-second version for today.
+
+React is a JavaScript library
+
+It helps you build user interfaces from reusable pieces called components.
+
+What this means
+
+React updates the screen automatically when your data changes. You write less boilerplate code.
+
+Used by product teams
+
+Instagram
+Netflix
+Airbnb
+Atlassian
+Shopify
+
+You are learning a workflow used in real web products, not a toy example.
+
+========================================================================
+SLIDE 07 ? Why React?
+========================================================================
+Why React?
+
+React flips the UI update model from manual changes to declarative state.
+
+Before React
+
+Manually update the page
+
+button.onclick = () => {
+count++;
+label.innerText = count;
+}
+
+You find elements and tell the browser exactly what to change.
+
+With React
+
+Update state, React updates UI
+
+setCount(count + 1)
+
+<p>{count}</p>
+
+You describe the UI for the current data. React handles the screen update.
+
+Remember
+
+Declarative UI means you write what you want to see based on state. You update the state, and React handles the DOM.
+
+========================================================================
+SLIDE 08 ? React Component Mental Model
+========================================================================
+React Component Mental Model
+
+A component is a reusable UI block. For this app, the tree is simple.
+
+App <- holds tasks state, calculates counts
+
+Header <- displays logo and "X of Y tasks done"
+
+AddTaskForm <- input field and Add Task button
+
+TaskCard <- renders individual task {title, status, priority}
+
+TaskCard <- same component, different task data
+
+TaskCard <- rendered dynamically using tasks.map()
+
+Remember
+
+A component is just a JavaScript function that returns UI. Build it once, pass different props, and reuse it anywhere.
+
+========================================================================
+SLIDE 09 ? JSX
+========================================================================
+JSX
+
+JSX looks like HTML, but it is written inside JavaScript.
+
+What this means
+
+JSX looks like HTML, but it lives inside JavaScript. React compiles it into standard HTML elements.
+
+Rules of JSX
+
+{ } Use curly braces for JavaScript variables or logic
+
+class Use className instead of class for CSS styling
+
+</> All tags must be closed explicitly (e.g. <input />)
+
+1 Must return a single parent element (or a fragment <>)
+
+App.jsx
+
+function App() {
+const name = "Alya";
+
+return (
+<main>
+<h1 className="header-title">Student Task Manager</h1>
+<p>Built by {name}</p>
+</main>
+);
+}
+
+========================================================================
+SLIDE 10 ? Build Step 1: Your First React UI
+========================================================================
+Build Step 1: Your First React UI
+
+Goal: render your first custom React UI and see it update in the browser.
+
+Build Step 1
+
+1
+Quick reminder: if needed, start the preview with npm run dev .
+
+2
+Open the file src/App.jsx in your text editor.
+
+3
+Modify the heading text to "My Task Manager" and add a subtitle with your name.
+
+<h1 className="header-title">My Task Manager</h1>
+<p>Built by [Your Name]</p>
+
+Checkpoint: The browser preview updates instantly (Hot Module Replacement).
+
+========================================================================
+SLIDE 11 ? Components
+========================================================================
+Components
+
+A component is a reusable JavaScript function that returns UI.
+
+Remember
+
+A component is just a JavaScript function that returns UI. It must begin with a capital letter (e.g. Header) and return JSX.
+
+Capitalization rule
+
+Header is a React component. header is a built-in HTML tag.
+
+Header.jsx
+
+function Header() {
+return (
+<header>
+<h1>Task Manager</h1>
+</header>
+);
+}
+
+export default Header;
+
+========================================================================
+SLIDE 12 ? Build Step 2: Create Header Component
+========================================================================
+Build Step 2: Create Header Component
+
+Goal: extract the header section into its own reusable component file.
+
+Build Step 2
+
+1
+Create a new file named:
+src/components/Header.jsx
+
+2
+Define the component function Header() .
+
+3
+Export it from the file.
+
+4
+Import and render <Header /> in App.jsx .
+
+Checkpoint: your app shows the header through a custom component.
+
+========================================================================
+SLIDE 13 ? Props: Passing Data
+========================================================================
+Props: Passing Data
+
+Props are data passed from parent to child.
+
+Remember
+
+Props are like function arguments. Parent sends data via attributes, child receives them as an object parameter.
+
+Watch the braces
+
+{title} means "insert this JavaScript value into the JSX."
+
+Parent and Child
+
+// App.jsx
+<TaskCard title="Finish assignment" />
+<TaskCard title="Revise React" />
+
+// TaskCard.jsx
+function TaskCard({ title }) {
+return <p>{title}</p>;
+}
+
+========================================================================
+SLIDE 14 ? Build Step 3: Dynamic Task Cards
+========================================================================
+Build Step 3: Dynamic Task Cards
+
+Goal: reuse the same component with different task titles.
+
+Build Step 3
+
+1
+Open or create:
+src/components/TaskCard.jsx
+
+2
+Define TaskCard to accept a title prop.
+
+3
+Render <TaskCard /> multiple times with different titles.
+
+Key idea
+
+Instead of copying UI code, write one TaskCard component and change its contents using props.
+
+========================================================================
+SLIDE 15 ? State: React's Memory
+========================================================================
+State: React's Memory
+
+State stores data that can change and trigger a re-render.
+
+What this means
+
+State is React’s memory. When state variables change, React automatically re-renders the component to reflect new data on the screen.
+
+tasks current value
+
+setTasks update function
+
+[] starting value
+
+Remember
+
+Never mutate state arrays or objects directly (e.g. tasks.push() ). Always use the setter function (e.g. setTasks() ) to guarantee re-rendering.
+
+App.jsx
+
+import { useState } from 'react';
+
+const [tasks, setTasks] = useState([]);
+
+// tasks = current value
+// setTasks = update function
+// [] = starting value
+
+========================================================================
+SLIDE 16 ? State Flow
+========================================================================
+State Flow
+
+The loop behind every interactive React feature.
+
+01
+User Action
+Click add, type, delete
+
+->
+
+02
+State Changes
+Call the setter
+
+->
+
+03
+Component Re-renders
+React recalculates UI
+
+->
+
+04
+Screen Updates
+Browser shows new data
+
+Remember
+
+We update state, not the DOM by hand. React handles the visible screen update.
+
+========================================================================
+SLIDE 17 ? Build Step 4: Render Tasks from State
+========================================================================
+Build Step 4: Render Tasks from State
+
+Goal: loop over the tasks array and render a TaskCard for each task.
+
+Props upgrade: earlier, TaskCard received only a title . Now it receives the full task object from tasks.map() .
+
+Build Step 4
+
+1
+In App.jsx , initialize tasks state with sampleTasks .
+
+2
+Use tasks.map() to generate TaskCard components.
+
+3
+Pass the full object and a unique key:
+task={task} key={task.id}
+
+Checkpoint: changing the array changes the rendered task cards.
+
+App.jsx
+
+const [tasks, setTasks] = useState(sampleTasks);
+
+{tasks.map(task => (
+<TaskCard
+key={task.id}
+task={task}
+onDelete={handleDeleteTask}
+onToggle={handleToggleTask}
+/>
+))}
+
+========================================================================
+SLIDE 18 ? Add Task Feature
+========================================================================
+Add Task Feature
+
+Controlled input plus a state update.
+
+What this means
+
+The input value lives in state. When the user types, state updates. When they add, tasks updates.
+
+Remember
+
+The spread operator creates a new array instead of modifying the old one.
+
+App.jsx
+
+const [newTask, setNewTask] = useState("");
+
+const handleAddTask = () => {
+if (!newTask.trim()) return;
+setTasks([
+...tasks,
+{
+id: Date.now(),
+title: newTask.trim(),
+status: 'Pending',
+priority: 'medium'
+}
+]);
+setNewTask("");
+};
+
+========================================================================
+SLIDE 19 ? Delete Task Feature
+========================================================================
+Delete Task Feature
+
+Remove an item without mutating the original array.
+
+Remember
+
+filter() creates a new array without the deleted task.
+
+Data flow
+
+Pass handleDeleteTask down as a prop so TaskCard can trigger the parent update.
+
+delete-task.jsx
+
+const handleDeleteTask = (id) => {
+setTasks(
+tasks.filter(task => task.id !== id)
+);
+};
+
+<TaskCard
+onDelete={handleDeleteTask}
+/>
+
+========================================================================
+SLIDE 20 ? Complete Task + Counter
+========================================================================
+Complete Task + Counter
+
+Two connected ideas: update one task, then calculate live counts from the updated array.
+
+Toggle Complete
+
+handleToggleTask
+
+const handleToggleTask = (id) => {
+setTasks(tasks.map(task =>
+task.id === id
+? { ...task, status: task.status === 'Done'
+? 'Pending' : 'Done' }
+: task
+));
+};
+
+Remember
+map() checks every task, but only changes the selected one.
+
+Derived Task Counter
+
+5
+Total
+
+2
+Pending
+
+3
+Done
+
+counts + Header props
+
+const pendingCount = tasks.filter(t =>
+t.status === 'Pending').length;
+const doneCount = tasks.filter(t =>
+t.status === 'Done').length;
+const totalCount = tasks.length;
+
+<Header pendingCount={pendingCount}
+doneCount={doneCount} totalCount={totalCount} />
+
+Remember
+The counter is derived from existing state, so it stays in sync automatically.
+
+========================================================================
+SLIDE 21 ? React Recap
+========================================================================
+Milestone reached
+
+React Recap
+
+Built Structure
+Header
+TaskCard
+Component reuse
+
+Passed Data
+Props
+State
+Data down, events up
+
+Added Features
+Add
+Delete
+Toggle complete
+Counter
+
+☕ Coffee / Tea Break
+
+Take 10 minutes to stretch, grab a drink, and discuss your thoughts!
+
+========================================================================
+SLIDE 22 ? GitHub Copilot
+========================================================================
+GitHub Copilot
+
+An AI coding assistant for suggestions, generation, and explanation.
+
+What Copilot Can Do
+
+1 Suggest inline code
+
+2 Complete functions
+
+3 Generate React components
+
+4 Explain unfamiliar code
+
+What Copilot Is Not
+
+It is not a replacement for understanding, testing, or reading your code carefully.
+
+Remember
+
+Copilot is an assistant, not the author. Always review, test, and understand what it suggests before keeping it.
+
+========================================================================
+SLIDE 23 ? How Copilot Works
+========================================================================
+How Copilot Works
+
+Interactive pair-programming cycle
+
+01
+
+Write Context
+
+Write code comments or begin function structure
+
+->
+
+02
+
+Copilot Suggests
+
+AI offers matching gray ghost text
+
+->
+
+03
+
+You Review
+
+Inspect suggestion validity & logic
+
+->
+
+04
+
+Accept / Modify
+
+Press Tab key to insert or write edits
+
+Remember
+
+Copilot uses your comments, active editor tabs, code cursor position, and project signatures to make suggestions.
+
+========================================================================
+SLIDE 24 ? Writing Better Prompts
+========================================================================
+Writing Better Prompts
+
+Give Copilot specific, high-quality context for better suggestions.
+
+Weak Prompt
+
+// add filter
+
+Too brief. Copilot does not know the inputs, behavior, or constraints.
+
+Strong Prompt
+
+// Add a search bar that filters tasks by title and status in real time. Keep the original tasks array unchanged.
+
+Clear task, inputs, expected behavior, and constraint.
+
+What to build (e.g. Search input)
+Inputs (e.g. query state)
+Expected behavior (e.g. filter array)
+Constraints (e.g. case insensitive)
+
+========================================================================
+SLIDE 25 ? Live Copilot Demo
+========================================================================
+Live Copilot Demo
+
+Three copy-ready prompts for a focused live demonstration.
+
+Component Generation
+
+Ask for a reusable component with clear prop names.
+
+// Create a SummaryBar component that receives totalCount, pendingCount, and doneCount as props
+
+Function Completion
+
+Describe the behavior and protect the original array.
+
+// Add a function that filters tasks by status without modifying the original array
+
+CSS Styling
+
+Request visual polish while keeping the existing class structure.
+
+/* Style a task card with priority badges and a soft hover effect */
+
+========================================================================
+SLIDE 26 ? Build Step 5: Build With Copilot
+========================================================================
+Build Step 5: Build With Copilot
+
+Use Copilot to improve the existing counter into a cleaner summary dashboard.
+
+Build Step 5
+
+1
+Start from the existing counter logic in src/App.jsx .
+
+2
+Ask Copilot to create a cleaner summary dashboard or bar.
+
+3
+Review the suggested component, props, and class names before accepting.
+
+4
+Add the UI, then test counts by adding, deleting, and completing tasks.
+
+Checkpoint: the existing logic now powers a clearer dashboard. Optional stretch: add a PriorityBadge component.
+
+========================================================================
+SLIDE 27 ? Challenge Activity
+========================================================================
+Phase 3 begins
+
+Challenge Activity
+
+Enhance the Student Task Manager from the GitHub repo / starter repo. Work individually or in teams; the highest working score wins.
+
+Solo or teams
+30 minutes
+Copilot allowed
+
+Minimum Viable Challenge Start with Enter key support or status color coding.
+
+Copilot, documentation, and teammates are allowed. You must understand and explain what you submit.
+
+========================================================================
+SLIDE 28 ? Challenge Features Menu
+========================================================================
+Challenge Features Menu
+
+Pick your features and start building. Track points as you complete.
+
+Tier 1: Foundations 10-15 pts each
+
+Task counter - 10 pts
+
+Priority badges - 10 pts
+
+Enter key support - 10 pts
+
+Status color coding - 15 pts
+
+Tier 2: Features 15-20 pts each
+
+Search bar - 15 pts
+
+Category filter tabs - 20 pts
+
+Edit task title inline - 20 pts
+
+Tier 3: Advanced 25 pts each
+
+localStorage persistence - 25 pts
+
+Dark/light mode - 25 pts
+
+Progress bar - 25 pts
+
+Bonus
+
+Creativity award - +15 pts
+
+Useful UX polish and clear explanation
+
+========================================================================
+SLIDE 29 ? Challenge Guidelines
+========================================================================
+Challenge Guidelines
+
+Build from the GitHub repo / starter repo. Keep testing after every change.
+
+Allowed
+
+✓ GitHub Copilot assistant
+
+✓ Documentation
+
+✓ Teammate discussion
+
+✓ Workshop materials
+
+Focus
+
+-> Working feature
+
+-> Readable code
+
+-> Clear explanation
+
+-> Creativity
+
+Remember
+
+Test after every change. A small working feature beats a large broken one.
+
+========================================================================
+SLIDE 30 ? Challenge Prompt Starter Pack
+========================================================================
+Challenge Prompt Starter Pack
+
+Start with these comments, then adapt variable and component names to your code.
+
+prompts.txt
+
+// Search: filter tasks whose title includes searchTerm, case-insensitive; keep tasks unchanged.
+
+// Priority: create PriorityBadge({ priority }) with high, medium, and low color classes.
+
+// localStorage: load 'workshop-tasks' on mount and save whenever tasks changes.
+
+// Dark mode: toggle a dark class and persist the choice as 'workshop-dark-mode'.
+
+// Enter key: in AddTaskForm, call onAdd when event.key is 'Enter'.
+
+// Progress: calculate doneCount / totalCount safely and animate the fill width.
+
+========================================================================
+SLIDE 31 ? Showcase & Demos
+========================================================================
+Showcase & Demos
+
+Each selected team gets 3 minutes.
+
+1 min app demo
+
+Show the feature working in browser.
+
+1 min code explanation
+
+Point to the important state, props, or handler logic.
+
+1 min Copilot prompt
+
+Explain the prompt and what you reviewed.
+
+1 Feature completion
+
+2 Copilot usage
+
+3 Presentation clarity
+
+4 Creativity
+
+========================================================================
+SLIDE 32 ? Key Takeaways
+========================================================================
+Key Takeaways
+
+Your take-home cheat sheet for the next React project.
+
+React Foundations
+
+JSX UI syntax written inside JavaScript.
+
+Component A function that returns reusable UI.
+
+Props Read-only data from parent to child.
+
+State Data that triggers a re-render when updated.
+
+useState The hook that creates state and its setter.
+
+Data Flow Data down, events up.
+
+Arrays Use map, filter, and spread for new arrays.
+
+Rule Never mutate state directly.
+
+Copilot Golden Rules
+
+1. Comment First Describe what to build before asking for code.
+
+2. Be Specific Name inputs, expected behavior, and constraints.
+
+3. Read Suggestions Understand every line before accepting it.
+
+4. Test Often Check the browser after every small change.
+
+5. You Decide Copilot assists; you are the developer.
+
+========================================================================
+SLIDE 33 ? Thank You! 🎉
+========================================================================
+GDSC UTP Workshop Series
+
+Thank You! 🎉
+
+Keep Building. Keep Learning. Keep Exploring.
+
+Feedback + Certificate
+
+QR placeholder
+
+GDSC UTP Community
+
+QR placeholder
+
+Scan the feedback form for your certificate
+
+Join the GDSC UTP community
+
+Share your Task Manager screenshot
+
+Group photo before leaving
+
+Q&A | THANK YOU FOR BUILDING WITH US

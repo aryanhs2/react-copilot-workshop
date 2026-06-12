@@ -672,7 +672,7 @@
             <div class="rm-week" style="color:var(--violet2)">Phase 1</div>
             <div class="rm-line" style="border-color:#5B21B6">
               <div class="rm-title" style="color:var(--violet2)">React Fundamentals</div>
-              <div class="rm-desc">JSX to components to props to state, with hands-on steps using <code>Workshop_Buildalong_Starter</code>.</div>
+              <div class="rm-desc">JSX to components to props to state, with mini-builds after each concept.</div>
             </div>
           </div>
           <div class="rm-item">
@@ -686,7 +686,7 @@
             <div class="rm-week" style="color:var(--amber)">Phase 3</div>
             <div class="rm-line" style="border-color:#92400E">
               <div class="rm-title" style="color:var(--amber)">Challenge Activity</div>
-              <div class="rm-desc">Switch to <code>Challenge/Starter Project</code>, add extra features with Copilot, earn points, and demo.</div>
+              <div class="rm-desc">Use the GitHub starter repo, build extra features, earn points, and demo your work.</div>
             </div>
           </div>
         </div>
@@ -837,12 +837,12 @@
       <div class="content centered">
         <div class="slide-title">Build Step 1: Your First React UI<span class="cursor"></span></div>
         <div class="slide-sub">Goal: render your first custom React UI and see it update in the browser.</div>
-        <div class="teaching-cue">You are replacing the starter screen with UI that you control inside <span class="code-pill">Workshop_Buildalong_Starter/src/App.jsx</span>.</div>
+        <div class="teaching-cue">You are replacing the starter screen with UI that you control inside <span class="code-pill">src/App.jsx</span>.</div>
         <div class="card build-card">
           <div class="build-tag">Build Step 1</div>
           <div class="build-steps">
-            <div class="build-step-row"><div class="build-step-number">1</div><div class="build-step-content">Quick reminder: if needed, start the preview with <span class="code-pill">npm run dev</span> inside <code>Workshop_Buildalong_Starter</code>.</div></div>
-            <div class="build-step-row"><div class="build-step-number">2</div><div class="build-step-content">Open the file <span class="code-pill">Workshop_Buildalong_Starter/src/App.jsx</span> in your text editor.</div></div>
+            <div class="build-step-row"><div class="build-step-number">1</div><div class="build-step-content">Quick reminder: if needed, start the preview with <span class="code-pill">npm run dev</span>.</div></div>
+            <div class="build-step-row"><div class="build-step-number">2</div><div class="build-step-content">Open the file <span class="code-pill">src/App.jsx</span> in your text editor.</div></div>
             <div class="build-step-row"><div class="build-step-number">3</div><div class="build-step-content">Modify the heading text to "My Task Manager" and add a subtitle with your name.</div></div>
           </div>
           <div class="mini-code" style="margin-top:14px">&lt;h1 className="header-title"&gt;My Task Manager&lt;/h1&gt;<br>&lt;p&gt;Built by [Your Name]&lt;/p&gt;</div>
@@ -892,10 +892,10 @@
         <div class="card build-card">
           <div class="build-tag">Build Step 2</div>
           <div class="build-steps">
-            <div class="build-step-row"><div class="build-step-number">1</div><div class="build-step-content">Create a new file named:<div class="code-row">Workshop_Buildalong_Starter/src/components/Header.jsx</div></div></div>
+            <div class="build-step-row"><div class="build-step-number">1</div><div class="build-step-content">Create a new file named:<div class="code-row">src/components/Header.jsx</div></div></div>
             <div class="build-step-row"><div class="build-step-number">2</div><div class="build-step-content">Move the header JSX into a component function named <span class="code-pill">Header()</span>.</div></div>
             <div class="build-step-row"><div class="build-step-number">3</div><div class="build-step-content">Export it from the file.</div></div>
-            <div class="build-step-row"><div class="build-step-number">4</div><div class="build-step-content">Open <span class="code-pill">Workshop_Buildalong_Starter/src/App.jsx</span>, import it, and render <span class="code-pill">&lt;Header /&gt;</span>.</div></div>
+            <div class="build-step-row"><div class="build-step-number">4</div><div class="build-step-content">Open <span class="code-pill">src/App.jsx</span>, import it, and render <span class="code-pill">&lt;Header /&gt;</span>.</div></div>
           </div>
           <div class="goal"><strong>What you should see:</strong> the same header still appears. <strong>Checkpoint:</strong> it now comes from <span class="code-pill">Header.jsx</span>.</div>
         </div>
@@ -944,13 +944,13 @@
       <div class="content centered">
         <div class="slide-title">Build Step 3: Dynamic Task Cards<span class="cursor"></span></div>
         <div class="slide-sub">Goal: reuse the same component with different task titles.</div>
-        <div class="teaching-cue">This step shows how one component can display different data through props. <span style="color:var(--amber)">Simple props first. In the next build step, we upgrade this to the full task object.</span></div>
+        <div class="teaching-cue">This step shows how one component can display different data through props.</div>
         <div class="card build-card">
           <div class="build-tag">Build Step 3</div>
           <div class="build-steps">
-            <div class="build-step-row"><div class="build-step-number">1</div><div class="build-step-content">Create a new file named:<div class="code-row">Workshop_Buildalong_Starter/src/components/TaskCard.jsx</div></div></div>
+            <div class="build-step-row"><div class="build-step-number">1</div><div class="build-step-content">Open or create:<div class="code-row">src/components/TaskCard.jsx</div></div></div>
             <div class="build-step-row"><div class="build-step-number">2</div><div class="build-step-content">Define <span class="code-pill">TaskCard</span> to accept a <span class="code-pill">title</span> prop.</div></div>
-            <div class="build-step-row"><div class="build-step-number">3</div><div class="build-step-content">Open <span class="code-pill">Workshop_Buildalong_Starter/src/App.jsx</span> and render <span class="code-pill">&lt;TaskCard /&gt;</span> multiple times with different titles.</div></div>
+            <div class="build-step-row"><div class="build-step-number">3</div><div class="build-step-content">Open <span class="code-pill">src/App.jsx</span> and render <span class="code-pill">&lt;TaskCard /&gt;</span> multiple times with different titles.</div></div>
           </div>
           <div class="explain amber" style="margin-top:14px">
             <div class="explain-title">What you should see</div>
@@ -1030,20 +1030,20 @@
       <div class="content tight">
         <div class="slide-title">Build Step 4: Render Tasks from State<span class="cursor"></span></div>
         <div class="slide-sub">Goal: loop over the tasks array and render a TaskCard for each task.</div>
-        <div class="transition-cue"><strong>Refactor moment:</strong> <span class="code-pill">TaskCard</span> now receives the full <span class="code-pill">task</span> object using <span class="code-pill">task={task}</span>.</div>
+        <div class="transition-cue"><strong>Props upgrade:</strong> earlier, <span class="code-pill">TaskCard</span> received only a <span class="code-pill">title</span>. Now it receives the full <span class="code-pill">task</span> object from <span class="code-pill">tasks.map()</span>.</div>
         <div class="two-col">
           <div class="card build-card" style="height:fit-content">
             <div class="build-tag">Build Step 4</div>
             <div class="build-steps">
-              <div class="build-step-row"><div class="build-step-number">1</div><div class="build-step-content">In <span class="code-pill">Workshop_Buildalong_Starter/src/App.jsx</span>, initialize <span class="code-pill">tasks</span> state with <span class="code-pill">sampleTasks</span>.</div></div>
+              <div class="build-step-row"><div class="build-step-number">1</div><div class="build-step-content">In <span class="code-pill">App.jsx</span>, initialize <span class="code-pill">tasks</span> state with <span class="code-pill">sampleTasks</span>.</div></div>
               <div class="build-step-row"><div class="build-step-number">2</div><div class="build-step-content">Use <span class="code-pill">tasks.map()</span> to generate <span class="code-pill">TaskCard</span> components.</div></div>
-              <div class="build-step-row"><div class="build-step-number">3</div><div class="build-step-content">Update the signature in <span class="code-pill">Workshop_Buildalong_Starter/src/components/TaskCard.jsx</span>:<div class="code-row">function TaskCard({ task })</div></div></div>
+              <div class="build-step-row"><div class="build-step-number">3</div><div class="build-step-content">Update the component signature in <span class="code-pill">TaskCard.jsx</span>:<div class="code-row">function TaskCard({ task, onDelete, onToggle })</div></div></div>
             </div>
             <div class="goal"><strong>What you should see:</strong> one card per item in <span class="code-pill">tasks</span>. <strong>Checkpoint:</strong> changing the array changes the UI without editing the JSX list.</div>
           </div>
           <div class="codeblock large">
             <div class="cb-header"><div class="tb-dot" style="background:#FF5F57;width:8px;height:8px"></div><span class="cb-filename">App.jsx</span></div>
-            <div class="cb-body"><span class="kw">const</span> [tasks, setTasks] = <span class="fn">useState</span>(sampleTasks);<br><br>{tasks.<span class="fn">map</span>(task =&gt; (<br>&nbsp;&nbsp;&lt;<span class="tag">TaskCard</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">key</span>={task.id}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">task</span>={task}<br>&nbsp;&nbsp;/&gt;<br>))}</div>
+            <div class="cb-body"><span class="kw">const</span> [tasks, setTasks] = <span class="fn">useState</span>(sampleTasks);<br><br>{tasks.<span class="fn">map</span>(task =&gt; (<br>&nbsp;&nbsp;&lt;<span class="tag">TaskCard</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">key</span>={task.id}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">task</span>={task}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">onDelete</span>={handleDeleteTask}<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">onToggle</span>={handleToggleTask}<br>&nbsp;&nbsp;/&gt;<br>))}</div>
           </div>
         </div>
       </div>
@@ -1069,8 +1069,8 @@
               <p>The handler has three jobs: reject blank input after <code>trim()</code>, add a task in a fresh array, then clear the input.</p>
             </div>
             <div class="card">
-              <div class="card-h" style="color:var(--green)">Create AddTaskForm.jsx</div>
-              <p class="card-p">Create <code>src/components/AddTaskForm.jsx</code>. Accept <code>value</code>, <code>onChange</code>, and <code>onAdd</code>. Render an input using <code>onChange={(e) => onChange(e.target.value)}</code> and a button triggering <code>onAdd</code>.</p>
+              <div class="card-h" style="color:var(--green)">AddTaskForm props</div>
+              <p class="card-p"><span class="itag">AddTaskForm</span> receives <span class="itag">value</span>, <span class="itag">onChange</span>, and <span class="itag">onAdd</span> from App — keeping the input connected to React state.</p>
               <div class="feature-list" style="margin-top:8px">
                 <div class="feature-pill"><span>value</span>comes from newTask</div>
                 <div class="feature-pill"><span>onChange</span>calls setNewTask</div>
@@ -1080,7 +1080,7 @@
           </div>
           <div class="codeblock large">
             <div class="cb-header"><div class="tb-dot" style="background:#FF5F57;width:8px;height:8px"></div><span class="cb-filename">App.jsx</span></div>
-            <div class="cb-body"><span class="kw">const</span> [newTask, setNewTask] = <span class="fn">useState</span>(<span class="str">""</span>);<br><br><span class="kw">const</span> <span class="fn">handleAddTask</span> = () =&gt; {<br>&nbsp;&nbsp;<span class="cmt">// 1. Reject empty input</span><br>&nbsp;&nbsp;<span class="kw">if</span> (!newTask.<span class="fn">trim</span>()) <span class="kw">return</span>;<br><br>&nbsp;&nbsp;<span class="cmt">// 2. Add new task to the array</span><br>&nbsp;&nbsp;<span class="fn">setTasks</span>([<br>&nbsp;&nbsp;&nbsp;&nbsp;...tasks,<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">id</span>: Date.<span class="fn">now</span>(),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">title</span>: newTask.<span class="fn">trim</span>(),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">status</span>: <span class="str">'Pending'</span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">priority</span>: <span class="str">'medium'</span><br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;]);<br><br>&nbsp;&nbsp;<span class="cmt">// 3. Clear the input</span><br>&nbsp;&nbsp;<span class="fn">setNewTask</span>(<span class="str">""</span>);<br>};</div>
+            <div class="cb-body"><span class="kw">const</span> [newTask, setNewTask] = <span class="fn">useState</span>(<span class="str">""</span>);<br><br><span class="kw">const</span> <span class="fn">handleAddTask</span> = () =&gt; {<br>&nbsp;&nbsp;<span class="kw">if</span> (!newTask.<span class="fn">trim</span>()) <span class="kw">return</span>;<br>&nbsp;&nbsp;<span class="fn">setTasks</span>([<br>&nbsp;&nbsp;&nbsp;&nbsp;...tasks,<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">id</span>: Date.<span class="fn">now</span>(),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">title</span>: newTask.<span class="fn">trim</span>(),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">status</span>: <span class="str">'Pending'</span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="prop">priority</span>: <span class="str">'medium'</span><br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;]);<br>&nbsp;&nbsp;<span class="fn">setNewTask</span>(<span class="str">""</span>);<br>};</div>
           </div>
         </div>
       </div>
@@ -1093,7 +1093,7 @@
     <div class="main">
       <div class="topbar"><div class="tb-dot" style="background:#FF5F57"></div><div class="tb-dot" style="background:#FFBD2E"></div><div class="tb-dot" style="background:#28C840"></div><span class="tb-title">App.jsx</span><span class="tb-phase ph-1">phase 1</span></div>
       <div class="content centered">
-        <div class="slide-title">Delete Task: The onDelete Prop<span class="cursor"></span></div>
+        <div class="slide-title">Delete Task Feature<span class="cursor"></span></div>
         <div class="slide-sub">Remove an item without mutating the original array.</div>
         <div class="two-col">
           <div style="display:flex;flex-direction:column;gap:12px">
@@ -1102,8 +1102,8 @@
               <p><code>filter()</code> checks each id and returns a new array without the selected task. The original array is not mutated.</p>
             </div>
             <div class="card">
-              <div class="card-h" style="color:var(--green)">The onDelete Prop</div>
-              <p class="card-p">The button lives in <code>TaskCard</code>, but the state is in <code>App</code>. We pass the delete handler via the <span class="itag">onDelete</span> prop to <code>TaskCard</code>, so clicking the button calls the parent function with the task's ID.</p>
+              <div class="card-h" style="color:var(--green)">Data flow</div>
+              <p class="card-p">The button lives in TaskCard, but the tasks state lives in App. Pass <span class="itag">handleDeleteTask</span> down so the child can request the parent update.</p>
             </div>
             <div class="array-visual"><span class="array-state">[A, B, C]</span><span class="array-op">filter out B -&gt;</span><span class="array-state">[A, C]</span></div>
           </div>
@@ -1122,16 +1122,16 @@
     <div class="main">
       <div class="topbar"><div class="tb-dot" style="background:#FF5F57"></div><div class="tb-dot" style="background:#FFBD2E"></div><div class="tb-dot" style="background:#28C840"></div><span class="tb-title">complete-counter.jsx</span><span class="tb-phase ph-1">phase 1</span></div>
       <div class="content tight">
-        <div class="slide-title">Complete Task: The onToggle Prop<span class="cursor"></span></div>
+        <div class="slide-title">Complete Task + Counter<span class="cursor"></span></div>
         <div class="slide-sub">Two connected ideas: update one task, then calculate live counts from the updated array.</div>
         <div class="two-col" style="gap:16px">
           <div class="concept-panel">
             <div class="panel-label violet">Toggle Complete</div>
             <div class="codeblock">
               <div class="cb-header"><div class="tb-dot" style="background:#FF5F57;width:8px;height:8px"></div><span class="cb-filename">handleToggleTask</span></div>
-              <div class="cb-body"><span class="kw">const</span> <span class="fn">handleToggleTask</span> = (id) =&gt; {<br>&nbsp;&nbsp;<span class="fn">setTasks</span>(tasks.<span class="fn">map</span>(task =&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;task.id === id<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;? { ...task, <span class="prop">status</span>: task.status === <span class="str">'Done'</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;? <span class="str">'Pending'</span> : <span class="str">'Done'</span> }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: task<br>&nbsp;&nbsp;));<br>};<br><br>&lt;<span class="tag">TaskCard</span> <span class="prop">onToggle</span>={handleToggleTask} /&gt;</div>
+              <div class="cb-body"><span class="kw">const</span> <span class="fn">handleToggleTask</span> = (id) =&gt; {<br>&nbsp;&nbsp;<span class="fn">setTasks</span>(tasks.<span class="fn">map</span>(task =&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;task.id === id<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;? { ...task, <span class="prop">status</span>: task.status === <span class="str">'Done'</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;? <span class="str">'Pending'</span> : <span class="str">'Done'</span> }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: task<br>&nbsp;&nbsp;));<br>};</div>
             </div>
-            <div class="explain"><div class="explain-title">The onToggle Prop</div><p>We pass the handler via the <span class="itag">onToggle</span> prop. <code>map()</code> flips status (<code>Pending</code> &harr; <code>Done</code>) for the matching task and keeps others unchanged.</p></div>
+            <div class="explain"><div class="explain-title">Remember</div><p><code>map()</code> checks every task. If the id matches, flip its status; otherwise return that task unchanged.</p></div>
           </div>
           <div class="concept-panel">
             <div class="panel-label green">Derived Task Counter</div>
@@ -1316,15 +1316,15 @@
       <div class="topbar"><div class="tb-dot" style="background:#FF5F57"></div><div class="tb-dot" style="background:#FFBD2E"></div><div class="tb-dot" style="background:#28C840"></div><span class="tb-title">build-step-5.md</span><span class="tb-phase ph-2">phase 2</span></div>
       <div class="content centered">
         <div class="slide-title">Build Step 5: Build With Copilot<span class="cursor"></span></div>
-        <div class="slide-sub">Use Copilot to improve the existing counter into a cleaner summary dashboard. <span style="color:var(--amber);font-weight:600">(Copilot Demo Component — not part of the Challenge Feature Menu)</span></div>
-        <div class="teaching-cue">Start from working logic. Copilot is helping you improve the presentation, not invent the source of truth.<br><span style="color:var(--amber);font-weight:700">Copilot Demo Component — not part of the Challenge Feature Menu</span></div>
+        <div class="slide-sub">Use Copilot to improve the existing counter into a cleaner summary dashboard.</div>
+        <div class="teaching-cue">Start from working logic. Copilot is helping you improve the presentation, not invent the source of truth.</div>
         <div class="card build-card">
           <div class="build-tag">Build Step 5</div>
           <div class="build-steps">
-            <div class="build-step-row"><div class="build-step-number">1</div><div class="build-step-content">Open <span class="code-pill">Workshop_Buildalong_Starter/src/App.jsx</span> and locate the existing total, pending, and done counts.</div></div>
-            <div class="build-step-row"><div class="build-step-number">2</div><div class="build-step-content">Create a new component file named:<div class="code-row">Workshop_Buildalong_Starter/src/components/SummaryBar.jsx</div>Ask Copilot for a component that receives the three counts as props.</div></div>
+            <div class="build-step-row"><div class="build-step-number">1</div><div class="build-step-content">Open <span class="code-pill">src/App.jsx</span> and locate the existing total, pending, and done counts.</div></div>
+            <div class="build-step-row"><div class="build-step-number">2</div><div class="build-step-content">Create the summary component, or match the component name used in your starter:<div class="code-row">src/components/SummaryBar.jsx</div>Ask Copilot for a component that receives the three counts as props.</div></div>
             <div class="build-step-row"><div class="build-step-number">3</div><div class="build-step-content">Review the suggested component, props, and class names before accepting.</div></div>
-            <div class="build-step-row"><div class="build-step-number">4</div><div class="build-step-content">Import <span class="code-pill">SummaryBar</span> into <span class="code-pill">Workshop_Buildalong_Starter/src/App.jsx</span>, then test by adding, deleting, and completing tasks.</div></div>
+            <div class="build-step-row"><div class="build-step-number">4</div><div class="build-step-content">Import <span class="code-pill">SummaryBar</span> into <span class="code-pill">src/App.jsx</span>, then test by adding, deleting, and completing tasks.</div></div>
           </div>
           <div class="goal"><strong>What you should see:</strong> the summary updates after every task action. <strong>Optional stretch:</strong> add a <span class="code-pill">PriorityBadge</span> component.</div>
         </div>
@@ -1340,7 +1340,7 @@
       <div class="content slide-hero">
         <div class="eyebrow">Phase 3 begins</div>
         <div class="hero-title" style="color:var(--green)">Challenge Activity<span class="cursor"></span></div>
-        <div class="hero-sub" style="margin:0 auto;max-width:700px">Switch to the <code>Challenge/Starter Project</code> folder in your editor. Run <code>npm install</code> and <code>npm run dev</code> to start the challenge project. Working features, clear explanations, and creativity all count!</div>
+        <div class="hero-sub" style="margin:0 auto;max-width:680px">Enhance the Student Task Manager from the GitHub repo / starter repo. Working features, clear explanations, and creativity all count.</div>
         <div class="hero-meta" style="margin-top:20px">
           <span class="meta-pill" style="border-color:var(--green);color:var(--green)">Solo or teams</span>
           <span class="meta-pill timer-pill" style="border-color:var(--amber);color:var(--amber)">60 minutes</span>
@@ -1398,7 +1398,7 @@
       <div class="topbar"><div class="tb-dot" style="background:#FF5F57"></div><div class="tb-dot" style="background:#FFBD2E"></div><div class="tb-dot" style="background:#28C840"></div><span class="tb-title">rules.md</span><span class="tb-phase ph-3">phase 3</span></div>
       <div class="content centered">
         <div class="slide-title">Challenge Guidelines<span class="cursor"></span></div>
-        <div class="slide-sub">Build from the starter repo. Keep testing after every change. Refer to <code>CHALLENGE_GUIDE.md</code> and <code>COPILOT_CHEATSHEET.md</code> in your workspace.</div>
+        <div class="slide-sub">Build from the GitHub repo / starter repo. Keep testing after every change.</div>
         <div class="two-col" style="margin-top:10px">
           <div class="card" style="border-color:#065F46">
             <div class="card-h" style="color:var(--green)">Allowed</div>
@@ -1430,7 +1430,7 @@
       <div class="topbar"><div class="tb-dot" style="background:#FF5F57"></div><div class="tb-dot" style="background:#FFBD2E"></div><div class="tb-dot" style="background:#28C840"></div><span class="tb-title">starter-prompts.md</span><span class="tb-phase ph-3">phase 3</span></div>
       <div class="content tight">
         <div class="slide-title">Challenge Prompt Starter Pack<span class="cursor"></span></div>
-        <div class="slide-sub">Start with these comments. Full feature descriptions, hints, and code snippets are in <code>CHALLENGE_GUIDE.md</code>.</div>
+        <div class="slide-sub">Start with these comments, then adapt variable and component names to your code.</div>
         <div class="codeblock compact" style="margin-top:10px">
           <div class="cb-header"><div class="tb-dot" style="background:#FF5F57;width:8px;height:8px"></div><span class="cb-filename">prompts.txt</span></div>
           <div class="cb-body">
